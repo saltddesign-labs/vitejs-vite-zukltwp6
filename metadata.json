@@ -1,0 +1,7 @@
+{
+  "name": "memocollect Kiosk",
+  "description": "A touch-optimized self-service kiosk web app for creating personalized souvenirs.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

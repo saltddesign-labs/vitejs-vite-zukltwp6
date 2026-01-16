@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>memocollect Kiosk</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Using CDN for simplicity in this setup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                orange: '#FF3C02',
+                secondary: '#FF7701',
+                dark: '#190400',
+                cream: '#FFF1EE',
+                white: '#FFFFFF',
+              }
+            },
+            boxShadow: {
+              'soft': '0 4px 20px rgba(25, 4, 0, 0.08)',
+              'float': '0 20px 60px rgba(25, 4, 0, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      body { overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; }
+    </style>
+  </head>
+  <body class="bg-brand-cream text-brand-dark antialiased h-screen w-screen overflow-hidden selection:bg-brand-orange selection:text-white">
+    <div id="root" class="h-full w-full"></div>
+    <!-- VITE ENTRY POINT -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
